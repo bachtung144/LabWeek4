@@ -1,17 +1,17 @@
 import React from 'react';
-import {
-    SafeAreaView,
-    StyleSheet,
-    ScrollView,
-    View,
-    Text,
-    StatusBar,
-} from 'react-native';
+import FlatlistHeader from './FlatlistHeader';
+import {StyleSheet, View} from 'react-native';
 
 export default function DashBoard() {
-    return(
-        <View>
-
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <FlatlistHeader />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 20,
+  },
+});

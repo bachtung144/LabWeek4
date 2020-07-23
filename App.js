@@ -12,7 +12,10 @@ const Stack = createStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name="DashBoard" component={DashBoard} />
     </Stack.Navigator>
   );
@@ -37,7 +40,9 @@ export default function App() {
               );
             } else if (route.name === 'Profile') {
               let iconName = focused ? 'user' : 'user-o';
-              <FontAwesomeIcon name={iconName} size={25} color={color} />;
+              return (
+                <FontAwesomeIcon name={iconName} size={25} color={color} />
+              );
             }
           },
         })}
